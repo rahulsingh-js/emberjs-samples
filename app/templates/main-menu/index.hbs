@@ -1,0 +1,15 @@
+<div>
+  <ul>
+    {{#each navigationMenu as |menu|}}
+        <li class={{if menu.isActive 'active'}}>
+          <a href="#" {{action "navigateTo" menu}}>
+            <span class="username">{{menu.name}} </span>
+          </a>
+        </li>
+    {{/each}}
+  </ul>
+</div>
+<div class="col-sm-8">
+  <!-- outlet goes here -->
+  {{outlet 'rightContainer'}}
+</div>
